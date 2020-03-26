@@ -1,0 +1,28 @@
+<nav mat-tab-nav-bar class="d-none d-sm-flex">
+  <a mat-tab-link *ngFor="let e of examples" [active]="(currentSection$ | async) === e.id">
+    {{ e.label | translate }}
+  </a>
+</nav>
+
+<nav class="nav-responsive d-sm-none d-flex justify-content-center">
+  <mat-select [placeholder]="'anms.examples.title' | translate" [value]="'todos'">
+    <mat-option *ngFor="let e of examples" [value]="e">
+      {{ e.label | translate }}
+    </mat-option>
+  </mat-select>
+</nav>
+
+<div class="container">
+  <div
+    class="row align-items-end"
+    id="parentDiv"
+    imgwrScrollspy
+    [spiedTags]="['DIV']"
+    (sectionChange)="onSectionChange($event)"
+  >
+    <div class="col-md-12" id="e.id" *ngFor="let e of examples">
+      <h2 style="margin:0">{{ e.label | translate }}</h2>
+      <ng-container *ngComponentOutlet="e.component"></ng-container>
+    </div>
+  </div>
+</div>
