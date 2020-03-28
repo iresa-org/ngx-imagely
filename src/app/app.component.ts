@@ -1,24 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  logo = require('../assets/logo.png');
+  logo = '../assets/logo.png';
   navigation = [
-    { link: 'getting-started', label: 'imgwr.menu.getting-started' },
-    { link: 'docs', label: 'imgwr.menu.docs' },
-    { link: 'benchmark', label: 'imgwr.menu.benchmark' }
+    { link: 'getting-started', label: 'imagely.menu.getting-started' },
+    { link: 'docs', label: 'imagely.menu.docs' },
+    { link: 'benchmark', label: 'imagely.menu.benchmark' }
   ];
 
   theme = 'default-theme';
 
-  constructor(private translate: TranslateService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.translate.use('en');
-  }
+  ngOnInit() {}
 }

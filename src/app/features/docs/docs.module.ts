@@ -7,13 +7,17 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { environment } from '../../../environments/environment';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { OverviewComponent } from './overview/overview.component';
+import { BasicUsageComponent } from './examples/basic-usage/basic-usage.component';
+import { DocsContainerComponent } from './docs-container/docs-container.component';
+import { LazyLoadingComponent } from './examples/lazy-loading/lazy-loading.component';
+import { EagerLoadingComponent } from './examples/eager-loading/eager-loading.component';
+import { MissingAltAttrComponent } from './examples/missing-alt-attr/missing-alt-attr.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DocsComponent,
-    data: { title: 'imgwr.menu.docs' }
+    data: { title: 'imagely.menu.docs' }
   }
 ];
 
@@ -22,13 +26,22 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [DocsComponent, OverviewComponent],
+  declarations: [
+    DocsComponent,
+    BasicUsageComponent,
+    DocsContainerComponent,
+    LazyLoadingComponent,
+    EagerLoadingComponent,
+    MissingAltAttrComponent
+  ],
   imports: [
     CommonModule,
 
     SharedModule,
 
     TranslateModule.forChild({
+      defaultLanguage: 'en',
+      useDefaultLang: true,
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

@@ -1,9 +1,15 @@
 {
-  "imgwr.menu.getting-started": "Getting Started",
-  "imgwr.menu.docs": "Docs",
-  "imgwr.menu.benchmark": "Benchmark",
-  "imgwr.title.short": "Image Helper",
-  "imgwr.title.long": "Image Helper for Angular apps",
-  "imgwr.header.github": "Project Github Repository",
-  "imgwr.docs.menu.overview": "Overview"
+  "imagely.menu.getting-started": "Getting Started",
+  "imagely.menu.docs": "Docs",
+  "imagely.menu.benchmark": "Benchmark",
+  "imagely.title.short": "Image Helper",
+  "imagely.title.long": "Image Helper for Angular apps",
+  "imagely.header.github": "Project Github Repository",
+  "imagely.docs.html": "html",
+  "imagely.docs.component": "ts",
+  "imagely.docs.scss": "scss",
+  "imagely.docs.basicUsage": "Basic Usage",
+  "imagely.docs.lazyLoading": "Lazy Loading",
+  "imagely.docs.eagerLoading": "Eager Loading",
+  "imagely.docs.missingAlt": "Missing 'alt' attribute"
 }

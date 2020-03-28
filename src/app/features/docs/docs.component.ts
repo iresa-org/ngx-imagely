@@ -1,24 +1,21 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { IMG_FEATURES } from './docs.component.list';
 import { DOCUMENT } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'imgwr-docs',
+  selector: 'app-docs',
   templateUrl: './docs.component.html',
-  styleUrls: ['./docs.component.scss']
+  styleUrls: ['./docs.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DocsComponent implements OnInit {
   examples = IMG_FEATURES;
   currentSection$ = new BehaviorSubject<string>(IMG_FEATURES[0].id);
 
-  constructor(private translate: TranslateService, @Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
-  ngOnInit(): void {
-    this.translate.use('en');
-  }
+  ngOnInit(): void {}
 
   onSectionChange(sectionId: string) {
     this.currentSection$.next(sectionId);

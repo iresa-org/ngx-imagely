@@ -1,7 +1,7 @@
 import { Directive, Input, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[imgwrScrollspy]'
+  selector: '[scrollspy]'
 })
 export class ScrollspyDirective {
   @Input() public spiedTags = [];

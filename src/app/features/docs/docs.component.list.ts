@@ -1,6 +1,39 @@
-import { OverviewComponent } from './overview/overview.component';
+import { BasicUsageComponent } from './examples/basic-usage/basic-usage.component';
+import { LazyLoadingComponent } from './examples/lazy-loading/lazy-loading.component';
+import { EagerLoadingComponent } from './examples/eager-loading/eager-loading.component';
+import { MissingAltAttrComponent } from './examples/missing-alt-attr/missing-alt-attr.component';
 
 export const IMG_FEATURES = [
-  { id: 'overview', label: 'imgwr.docs.menu.overview', component: OverviewComponent },
-  { id: 'benchmark', label: 'imgwr.docs.menu.benchmark' }
+  {
+    id: 'basic',
+    label: 'imagely.docs.basicUsage',
+    outlet: BasicUsageComponent,
+    html: require('!!raw-loader!./examples/basic-usage/basic-usage.component.html'),
+    component: require('!!raw-loader!./examples/basic-usage/basic-usage.component.ts'),
+    scss: require('!!raw-loader!./examples/basic-usage/basic-usage.component.scss')
+  },
+  {
+    id: 'lazy-loading',
+    label: 'imagely.docs.lazyLoading',
+    outlet: LazyLoadingComponent,
+    html: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.html'),
+    component: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.ts'),
+    scss: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.scss')
+  },
+  {
+    id: 'eager-loading',
+    label: 'imagely.docs.eagerLoading',
+    outlet: EagerLoadingComponent,
+    html: require('!!raw-loader!./examples/eager-loading/eager-loading.component.html'),
+    component: require('!!raw-loader!./examples/eager-loading/eager-loading.component.ts'),
+    scss: require('!!raw-loader!./examples/eager-loading/eager-loading.component.scss')
+  },
+  {
+    id: 'missing-alt',
+    label: 'imagely.docs.missingAlt',
+    outlet: MissingAltAttrComponent,
+    html: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.html'),
+    component: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.ts'),
+    scss: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.scss')
+  }
 ];

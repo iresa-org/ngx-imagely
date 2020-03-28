@@ -5,8 +5,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
-export const MAT_COMPONENTS = [MatCardModule, MatSelectModule, MatTabsModule];
+export const MAT_COMPONENTS = [MatCardModule, MatSelectModule, MatTabsModule, MatTooltipModule];
 
 @NgModule({
   declarations: [ScrollspyDirective],
@@ -19,6 +20,6 @@ export const MAT_COMPONENTS = [MatCardModule, MatSelectModule, MatTabsModule];
     // Imagely
     NgxImagelyModule
   ],
-  exports: [...MAT_COMPONENTS, ScrollspyDirective]
+  exports: [...MAT_COMPONENTS, NgxImagelyModule, ScrollspyDirective]
 })
 export class SharedModule {}

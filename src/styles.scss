@@ -11,16 +11,18 @@
 @import './themes/default-theme';
 
 @import 'styles-reset.scss-theme';
+@import './prettify-angulario.scss';
 @import './app/app.component.scss-theme';
 @import './app/features/docs/docs.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
-  @include imgwr-styles-reset-theme($theme);
-  @include imgwr-app-component-theme($theme);
-  @include imgwr-docs-component-theme($theme);
+  @include imagely-prettyprint-theme($theme);
+  @include imagely-styles-reset-theme($theme);
+  @include imagely-app-component-theme($theme);
+  @include imagely-docs-component-theme($theme);
 }
 
 .default-theme {
-  @include angular-material-theme($imgwr-theme);
-  @include custom-components-theme($imgwr-theme);
+  @include angular-material-theme($imagely-theme);
+  @include custom-components-theme($imagely-theme);
 }

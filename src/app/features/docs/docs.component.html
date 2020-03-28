@@ -16,13 +16,15 @@
   <div
     class="row align-items-end"
     id="parentDiv"
-    imgwrScrollspy
+    scrollspy
     [spiedTags]="['DIV']"
     (sectionChange)="onSectionChange($event)"
   >
-    <div class="col-md-12" id="e.id" *ngFor="let e of examples">
+    <div [id]="e.id" class="col-md-12" id="e.id" *ngFor="let e of examples">
       <h2 style="margin:0">{{ e.label | translate }}</h2>
-      <ng-container *ngComponentOutlet="e.component"></ng-container>
+      <app-docs-container [data]="e">
+        <ng-container *ngComponentOutlet="e.outlet"></ng-container>
+      </app-docs-container>
     </div>
   </div>
 </div>
