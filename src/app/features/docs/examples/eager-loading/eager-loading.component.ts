@@ -1,13 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-eager-loading',
   templateUrl: './eager-loading.component.html',
-  styleUrls: ['./eager-loading.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./eager-loading.component.scss']
 })
-export class EagerLoadingComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class EagerLoadingComponent {}
