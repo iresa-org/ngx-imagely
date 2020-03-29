@@ -29,4 +29,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npm install
-        npm run ng -- deploy --base-href=https://kxbui.github.com/ngx-imagely --name="Khoi Bui" --email="emquacau123472@yahoo.com" --no-silent
+        npm run ng -- deploy --base-href=/ngx-imagely/ --name="Khoi Bui" --email="emquacau123472@yahoo.com" --no-silent
