@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>NgxImagelyDemo</title>
-  <base href="/ngx-imagely/">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="https://kxbui.github.io/ngx-imagely/">  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 <link rel="stylesheet" href="styles.8e50fb29fdc14fd7516e.css"></head>
 <body>
   <app-root></app-root>
-<script src="runtime-es2015.cf770c1e441d7a5a55c6.js" type="module"></script><script src="runtime-es5.cf770c1e441d7a5a55c6.js" nomodule defer></script><script src="polyfills-es5.ccc66611d13edfb46f2e.js" nomodule defer></script><script src="polyfills-es2015.d52bcb32ac021760e289.js" type="module"></script><script src="main-es2015.adb2e2e002308773939e.js" type="module"></script><script src="main-es5.adb2e2e002308773939e.js" nomodule defer></script></body>
+<script src="runtime-es2015.04ea5e595862b037e4f4.js" type="module"></script><script src="runtime-es5.04ea5e595862b037e4f4.js" nomodule defer></script><script src="polyfills-es5.73e3b0e0fdc5de63f219.js" nomodule defer></script><script src="polyfills-es2015.d52bcb32ac021760e289.js" type="module"></script><script src="main-es2015.f654ca61f70f7c74d038.js" type="module"></script><script src="main-es5.f654ca61f70f7c74d038.js" nomodule defer></script></body>
 </html>
