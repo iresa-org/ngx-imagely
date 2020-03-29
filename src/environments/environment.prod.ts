@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  i18nPrefix: '/imagewrp'
+  i18nPrefix: '/ngx-imagely'
 };

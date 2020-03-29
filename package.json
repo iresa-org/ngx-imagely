@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --base-href https://kxbui.github.io/ngx-imagely/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -15,7 +15,8 @@
     "build:lib": "ng build @iresa/ngx-imagely",
     "test:lib": "ng test @iresa/ngx-imagely",
     "release": "cd projects/iresa/ngx-imagely && standard-version --infile ../../../CHANGELOG.md",
-    "test:lib:headless": "cross-env CI=true npm run test:lib"
+    "test:lib:headless": "cross-env CI=true npm run test:lib",
+    "deploy": "gh-pages -d dist/ngx-imagely-demo"
   },
   "private": true,
   "dependencies": {
@@ -56,9 +57,9 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "all-contributors-cli": "^6.8.1",
-    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.1.2",
     "cross-env": "^5.2.0",
+    "gh-pages": "^2.2.0",
     "git-cz": "^3.2.1",
     "husky": "^3.0.1",
     "jasmine-core": "~3.5.0",

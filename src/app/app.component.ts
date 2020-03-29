@@ -7,7 +7,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  logo = '../assets/logo.png';
+  logo = 'assets/logo.png';
   navigation = [
     { link: 'getting-started', label: 'imagely.menu.getting-started' },
     { link: 'docs', label: 'imagely.menu.docs' },
