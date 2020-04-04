@@ -12,46 +12,68 @@
 [![ngneat](https://img.shields.io/badge/@-ngneat-383636?style=flat-square&labelColor=8f68d4)](https://github.com/ngneat/)
 [![spectator](https://img.shields.io/badge/tested%20with-spectator-2196F3.svg?style=flat-square)]()
 
-> The Library Slogan
+> Image utilities for modern Angular app
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
-Accusantium aliquid corporis cupiditate dolores eum exercitationem illo iure laborum minus nihil numquam odit officiis possimus quas quasi quos similique, temporibus veritatis? Exercitationem, iure magni nulla quo sapiente soluta. Esse?
+An image rendering directive for Angular 2+ app
 
 ## Features
 
-- ✅ One
-- ✅ Two
-- ✅ Three
+- ✅ Image Lazy Loading 
+- ✅ Remind developer of missing alt tag
+- ✅ Fallback image
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [FAQ](#faq)
+- [Properties](#properties)
 
 ## Installation
 
 ### NPM
 
+Install `ngx-imagely` via
 `npm install @iresa/ngx-imagely --save-dev`
 
-### Yarn
-
-`yarn add @iresa/ngx-imagely --dev`
+Once installed, import `NgxImagelyModule` to modules that use this image directive
+```ts
+import { NgxImagelyModule } from '@iresa/ngx-imagely';
+ 
+@NgModule({
+  ...
+  imports: [
+    ...
+    
+    // NgxImagelyModule
+    NgxImagelyModule, 
+    ...
+  ],
+  ...
+})
+export class YourAppModule {
+}
+```
 
 ## Usage
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+Apply `imagely` directive directly to html's `<img>` tag
 
-```ts
-function helloWorld() {}
+```html
+<img
+  imagely
+  src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+  alt="Photo of a Shiba Inu"
+  height="280"
+  width="350"
+  loadingType="eager"
+/>
 ```
 
-## FAQ
+## Properties
 
-## How to ...
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ips
+Property | Descriptions
+------------ | -------------
+loadingType | Loading Type for target images. Values: 'lazy' | 'eager'. Default value: 'lazy'
 
 ## Contributors ✨
 
