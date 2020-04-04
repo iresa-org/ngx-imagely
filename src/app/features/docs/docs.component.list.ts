@@ -2,6 +2,7 @@ import { BasicUsageComponent } from './examples/basic-usage/basic-usage.componen
 import { LazyLoadingComponent } from './examples/lazy-loading/lazy-loading.component';
 import { EagerLoadingComponent } from './examples/eager-loading/eager-loading.component';
 import { MissingAltAttrComponent } from './examples/missing-alt-attr/missing-alt-attr.component';
+import { FallbackImageComponent } from './examples/fallback-image/fallback-image.component';
 
 export const IMG_FEATURES = [
   {
@@ -35,5 +36,13 @@ export const IMG_FEATURES = [
     html: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.html'),
     component: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.ts'),
     scss: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.scss')
+  },
+  {
+    id: 'fallback-img',
+    label: 'imagely.docs.fallbackImg',
+    outlet: FallbackImageComponent,
+    html: require('!!raw-loader!./examples/fallback-image/fallback-image.component.html'),
+    component: require('!!raw-loader!./examples/fallback-image/fallback-image.component.ts'),
+    scss: require('!!raw-loader!./examples/fallback-image/fallback-image.component.scss')
   }
 ];

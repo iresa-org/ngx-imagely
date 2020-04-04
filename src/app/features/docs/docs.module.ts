@@ -12,6 +12,7 @@ import { DocsContainerComponent } from './docs-container/docs-container.componen
 import { LazyLoadingComponent } from './examples/lazy-loading/lazy-loading.component';
 import { EagerLoadingComponent } from './examples/eager-loading/eager-loading.component';
 import { MissingAltAttrComponent } from './examples/missing-alt-attr/missing-alt-attr.component';
+import { FallbackImageComponent } from './examples/fallback-image/fallback-image.component';
 
 const routes: Routes = [
   {
@@ -25,15 +26,16 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, `${environment.i18nPrefix}/assets/i18n/`, '.json');
 }
 
+const EXAMPLES = [
+  BasicUsageComponent,
+  LazyLoadingComponent,
+  EagerLoadingComponent,
+  MissingAltAttrComponent,
+  FallbackImageComponent
+];
+
 @NgModule({
-  declarations: [
-    DocsComponent,
-    BasicUsageComponent,
-    DocsContainerComponent,
-    LazyLoadingComponent,
-    EagerLoadingComponent,
-    MissingAltAttrComponent
-  ],
+  declarations: [DocsComponent, DocsContainerComponent, ...EXAMPLES],
   imports: [
     CommonModule,
 
