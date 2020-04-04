@@ -25,6 +25,7 @@ An image rendering directive for Angular 2+ app
 - [Installation](#installation)
 - [Usage](#usage)
 - [Properties](#properties)
+- [Contributors](#contributors)
 
 ## Installation
 
