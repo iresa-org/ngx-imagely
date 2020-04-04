@@ -19,7 +19,7 @@ An image rendering directive for Angular 2+ app
 ## Features
 
 - ✅ Image Lazy Loading 
-- ✅ Remind developer of missing alt tag
+- ✅ Remind developers of missing alt tag
 - ✅ Fallback image
 
 ## Table of Contents
