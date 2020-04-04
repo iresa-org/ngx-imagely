@@ -33,9 +33,11 @@ An image rendering directive for Angular 2+ app
 ### NPM
 
 Install `ngx-imagely` via
+
 `npm install @iresa/ngx-imagely --save-dev`
 
 Once installed, import `NgxImagelyModule` to modules that use this image directive
+
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
  
