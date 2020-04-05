@@ -1,4 +1,4 @@
-# Contributing to Ngx-imagely
+# Contributing to ngx-imagely
 
 🙏 We would ❤️ for you to contribute to Ngx-imagely and help make it even better than it is today!
 
@@ -17,7 +17,7 @@ npm test
 npm run e2e
 ```
 
-Run the playground app:
+Run the demo app:
 
 ```bash
 npm start
