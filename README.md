@@ -1,5 +1,5 @@
 <p align="center">
- <img width="20%" height="20%" src="./logo.svg">
+ <img width="20%" height="20%" src="https://github.com/kxbui/ngx-imagely/blob/master/logo.svg">
 </p>
 
 <br />
