@@ -5,3 +5,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### [1.0.1](https://github.com/kxbui/ngx-imagely/compare/v1.0.0...v1.0.1) (2020-04-05)
 
 ## 1.0.0 (2020-04-04)
+### Features
+
+- **init-lib:** add directive for images
