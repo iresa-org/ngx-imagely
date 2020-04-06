@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,14 @@ export class AppComponent implements OnInit {
 
   theme = 'default-theme';
 
-  constructor() {}
+  constructor(private overlayContainer: OverlayContainer) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.updateOverlayTheme();
+  }
+
+  updateOverlayTheme() {
+    const classlist = this.overlayContainer.getContainerElement().classList;
+    classlist.add(this.theme);
+  }
 }

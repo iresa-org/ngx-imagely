@@ -10,9 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { faGithub, faMediumM, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-
-import { faCog, faBars, faRocket, faPowerOff, faUserCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -78,18 +76,6 @@ export class CoreModule {
     if (parentModule) {
       throw new Error('CoreModule is already loaded. Import only in AppModule');
     }
-    faIconLibrary.addIcons(
-      faCog,
-      faBars,
-      faRocket,
-      faPowerOff,
-      faUserCircle,
-      faPlayCircle,
-      faGithub,
-      faMediumM,
-      faTwitter,
-      faInstagram,
-      faYoutube
-    );
+    faIconLibrary.addIcons(faGithub);
   }
 }
