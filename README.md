@@ -12,7 +12,7 @@
 
 > Image utilities for modern Angular app
 
-An image rendering directive for Angular 2+ app
+An image rendering directive for Angular 2+ app. Demo: https://kxbui.github.io/ngx-imagely
 
 ## Features
 
@@ -29,11 +29,11 @@ An image rendering directive for Angular 2+ app
 
 ## Installation
 
-Install `ngx-imagely` via
+- Install `ngx-imagely` via
 
 `npm install @iresa/ngx-imagely --save`
 
-Once installed, import `NgxImagelyModule` to modules that use this image directive
+- Once installed, import `NgxImagelyModule` to modules that use this image directive
 
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
