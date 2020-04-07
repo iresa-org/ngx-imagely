@@ -3,6 +3,8 @@
 </p>
 
 <br />
+
+[![npm version](https://badge.fury.io/js/%40iresa%2Fngx-imagely.svg)](https://badge.fury.io/js/%40iresa%2Fngx-imagely)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
 [![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
