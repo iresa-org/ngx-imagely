@@ -1,9 +1,10 @@
 <p align="center">
- <img width="20%" height="20%" src="./logo.svg">
+ <img width="20%" height="20%" src="https://github.com/kxbui/ngx-imagely/blob/master/logo.svg">
 </p>
 
 <br />
 
+[![npm version](https://badge.fury.io/js/%40iresa%2Fngx-imagely.svg)](https://badge.fury.io/js/%40iresa%2Fngx-imagely)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
 [![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
@@ -12,7 +13,7 @@
 
 > Image utilities for modern Angular app
 
-An image rendering directive for Angular 2+ app
+An image rendering directive for Angular 2+ app. Demo: https://kxbui.github.io/ngx-imagely
 
 ## Features
 
@@ -29,7 +30,7 @@ An image rendering directive for Angular 2+ app
 
 ## Installation
 
-Install `ngx-imagely` via
+- Install `ngx-imagely` via
 
 `npm install @iresa/ngx-imagely --save`
 
