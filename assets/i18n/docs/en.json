@@ -1,0 +1,10 @@
+{
+  "imagely.docs.html": "html",
+  "imagely.docs.component": "ts",
+  "imagely.docs.scss": "scss",
+  "imagely.docs.basicUsage": "Basic Usage",
+  "imagely.docs.lazyLoading": "Lazy Loading",
+  "imagely.docs.eagerLoading": "Eager Loading",
+  "imagely.docs.missingAlt": "Missing 'alt' attribute",
+  "imagely.docs.fallbackImg": "Fallback image"
+}
