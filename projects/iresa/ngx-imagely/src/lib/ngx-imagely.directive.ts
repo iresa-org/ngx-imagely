@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener, OnInit, Renderer2, Input } from '@angular/core';
 
 @Directive({
-  selector: '[imagely]'
+  selector: '[imagely], img'
 })
 export class ImagelyDirective implements OnInit {
   @Input()

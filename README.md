@@ -33,7 +33,7 @@ Install `ngx-imagely` via
 
 `npm install @iresa/ngx-imagely --save`
 
-Once installed, import `NgxImagelyModule` to modules that use this image directive
+Once installed, import `NgxImagelyModule` to the app or feature modules
 
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
@@ -55,11 +55,8 @@ export class YourAppModule {
 
 ## Usage
 
-Apply `imagely` directive directly to html's `<img>` tag
-
 ```html
 <img
-  imagely
   src="https://material.angular.io/assets/img/examples/shiba2.jpg"
   alt="Photo of a Shiba Inu"
   height="280"
