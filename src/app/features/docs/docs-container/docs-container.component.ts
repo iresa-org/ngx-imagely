@@ -8,7 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class DocsContainerComponent implements OnInit {
   @Input()
-  data: { component?; html?; scss? };
+  data: { component?; html?; scss?; description? };
   constructor() {}
 
   ngOnInit(): void {}

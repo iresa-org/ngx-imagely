@@ -7,7 +7,14 @@ export class ImagelyDirective implements OnInit {
   @Input()
   loadingType: 'lazy' | 'eager' = 'lazy';
 
+  @Input()
+  default: string;
+
   private readonly nativeEl: HTMLImageElement;
+
+  private trialCount = 0;
+
+  private readonly MAX_COUNT = 3;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
     this.nativeEl = this.el.nativeElement;
@@ -19,7 +26,13 @@ export class ImagelyDirective implements OnInit {
   }
 
   @HostListener('error') onError() {
-    this.setImageFallback();
+    if (this.trialCount < this.MAX_COUNT) {
+      this.trialCount++;
+      this.setImage(this.nativeEl.getAttribute('src'));
+    }
+    if (this.trialCount === this.MAX_COUNT) {
+      this.setImage(this.default);
+    }
   }
 
   private checkAltText() {
@@ -33,8 +46,10 @@ export class ImagelyDirective implements OnInit {
     this.nativeEl.style.border = '5px solid red';
   }
 
-  private setImageFallback() {
-    this.renderer.setAttribute(this.nativeEl, 'src', 'https://www.amulyamica.com/files/noimage.jpg');
+  private setImage(src) {
+    if (this.default && this.default.trim() !== '') {
+      this.renderer.setAttribute(this.nativeEl, 'src', src);
+    }
   }
 
   private setLoadingType() {

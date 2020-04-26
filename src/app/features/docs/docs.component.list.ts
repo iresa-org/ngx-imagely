@@ -19,7 +19,8 @@ export const IMG_FEATURES = [
     outlet: LazyLoadingComponent,
     html: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.html'),
     component: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.ts'),
-    scss: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.scss')
+    scss: require('!!raw-loader!./examples/lazy-loading/lazy-loading.component.scss'),
+    description: 'imagely.docs.lazyLoading.description'
   },
   {
     id: 'eager-loading',
@@ -35,7 +36,8 @@ export const IMG_FEATURES = [
     outlet: MissingAltAttrComponent,
     html: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.html'),
     component: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.ts'),
-    scss: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.scss')
+    scss: require('!!raw-loader!./examples/missing-alt-attr/missing-alt-attr.component.scss'),
+    description: 'imagely.docs.missingAlt.description'
   },
   {
     id: 'fallback-img',
@@ -43,6 +45,7 @@ export const IMG_FEATURES = [
     outlet: FallbackImageComponent,
     html: require('!!raw-loader!./examples/fallback-image/fallback-image.component.html'),
     component: require('!!raw-loader!./examples/fallback-image/fallback-image.component.ts'),
-    scss: require('!!raw-loader!./examples/fallback-image/fallback-image.component.scss')
+    scss: require('!!raw-loader!./examples/fallback-image/fallback-image.component.scss'),
+    description: 'imagely.docs.fallbackImg.description'
   }
 ];
