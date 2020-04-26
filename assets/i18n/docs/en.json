@@ -6,5 +6,8 @@
   "imagely.docs.lazyLoading": "Lazy Loading",
   "imagely.docs.eagerLoading": "Eager Loading",
   "imagely.docs.missingAlt": "Missing 'alt' attribute",
-  "imagely.docs.fallbackImg": "Fallback image"
+  "imagely.docs.fallbackImg": "Fallback image",
+  "imagely.docs.lazyLoading.description": "Declaration of lazy loading type can be ignored since this is the default loading",
+  "imagely.docs.missingAlt.description": "Any image with no 'alt' tag will have red border surrounding it",
+  "imagely.docs.fallbackImg.description": "Failed images will get retried 3 times before exhaustion. Then fallback image will be applied."
 }
