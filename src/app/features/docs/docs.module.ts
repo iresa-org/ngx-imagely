@@ -23,7 +23,7 @@ const routes: Routes = [
 ];
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, `${environment.i18nPrefix}/assets/i18n/`, '.json');
+  return new TranslateHttpLoader(http, `${environment.i18nPrefix}/assets/i18n/docs/`, '.json');
 }
 
 const EXAMPLES = [

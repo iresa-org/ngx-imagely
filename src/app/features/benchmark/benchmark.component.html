@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center mt-3">
+    <mat-form-field class="num-img-select">
+      <mat-label>{{ 'imagely.benchmark.selectImgTotal' | translate }}</mat-label>
+      <mat-select (selectionChange)="onSelectionChange($event)">
+        <mat-option *ngFor="let opt of options" [value]="opt">
+          {{ opt }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <section class="photos">
+      <img
+        imagely
+        *ngFor="let num of imageNum$ | async; let i = index"
+        width="400"
+        height="400"
+        src="https://picsum.photos/300/200?random={{ i }}"
+        alt="Benchmark pic {{ i }}"
+      />
+    </section>
+  </div>
+</div>
+
+<div class="scrolltop d-flex justify-content-center mt-3">
+  <a mat-icon-button class="link d-none d-sm-inline">
+    <button *ngIf="(imageNum$ | async).length" (click)="scrollTop()" mat-button color="primary">
+      {{ 'imagely.benchmark.scrollTop' | translate | uppercase }} <fa-icon class="ml-1" icon="arrow-up"></fa-icon>
+    </button>
+  </a>
+</div>

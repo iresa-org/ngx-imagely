@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -76,6 +77,6 @@ export class CoreModule {
     if (parentModule) {
       throw new Error('CoreModule is already loaded. Import only in AppModule');
     }
-    faIconLibrary.addIcons(faGithub);
+    faIconLibrary.addIcons(faGithub, faArrowUp);
   }
 }

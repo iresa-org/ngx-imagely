@@ -21,6 +21,10 @@ nav {
   height: 75vh;
   overflow-y: scroll;
 
+  .example-content {
+    padding-top: 100px;
+  }
+
   .example-content:last-child {
     padding-bottom: 300px;
   }
