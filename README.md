@@ -68,9 +68,10 @@ export class YourAppModule {
 
 ## Properties
 
-Property     | Descriptions
------------- | -------------
-loadingType  | Loading type for target images. Values: 'lazy' \| 'eager'. Default value: 'lazy'
+Property     | Type   | Descriptions
+------------ | -------| -------------
+default      | Input  | URL of a fallback image when failure occurs
+loadingType  | Input  | Loading type for target images. Values: 'lazy' \| 'eager'. Default value: 'lazy'
 
 ## Contributors ✨
 
