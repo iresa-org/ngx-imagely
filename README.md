@@ -19,7 +19,7 @@ An image rendering directive for Angular 2+ app. Demo: https://kxbui.github.io/n
 
 - ✅ Image Lazy Loading 
 - ✅ Remind developers of missing alt tag
-- ✅ Fallback image
+- ✅ Retry & Fallback image
 
 ## Table of Contents
 
