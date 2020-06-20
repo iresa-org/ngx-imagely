@@ -1,5 +1,5 @@
 <p align="center">
- <img width="20%" height="20%" src="https://github.com/kxbui/ngx-imagely/blob/master/logo.svg">
+ <img width="20%" height="20%" src="https://github.com/iresa-org/ngx-imagely/blob/master/logo.svg">
 </p>
 
 <br />
@@ -13,13 +13,13 @@
 
 > Image utilities for modern Angular app
 
-An image rendering directive for Angular 2+ app. Demo: https://kxbui.github.io/ngx-imagely
+An image rendering directive for Angular 2+ app. Demo: https://iresa-org.github.io/ngx-imagely
 
 ## Features
 
 - ✅ Image Lazy Loading 
 - ✅ Remind developers of missing alt tag
-- ✅ Retry & Fallback image
+- ✅ Retry & Fallback images
 
 ## Table of Contents
 

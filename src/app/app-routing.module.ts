@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./features/docs/docs.module').then(m => m.DocsModule)
   },
   {
-    path: 'getting-started',
-    loadChildren: () => import('./features/getting-started/getting-started.module').then(m => m.GettingStartedModule)
-  },
-  {
     path: 'benchmark',
     loadChildren: () => import('./features/benchmark/benchmark.module').then(m => m.BenchmarkModule)
   },
