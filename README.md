@@ -1,8 +1,5 @@
-<p align="center">
- <img width="20%" height="20%" src="https://github.com/iresa-org/ngx-imagely/blob/master/logo.svg">
-</p>
+# NGX-IMAGELY
 
-<br />
 
 [![npm version](https://badge.fury.io/js/%40iresa%2Fngx-imagely.svg)](https://badge.fury.io/js/%40iresa%2Fngx-imagely)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
