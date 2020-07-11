@@ -3,8 +3,7 @@
   "version": "1.1.0",
   "peerDependencies": {
     "@angular/common": ">=9.0.0",
-    "@angular/core": ">=9.0.0",
-    "tslib": ">=1.10.0"
+    "@angular/core": ">=9.0.0"
   },
   "keywords": [
     "angular",
@@ -24,5 +23,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/iresa-org/ngx-imagely"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }
