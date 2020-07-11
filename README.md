@@ -27,11 +27,11 @@ An image rendering directive for Angular 2+ app. Demo: https://iresa-org.github.
 
 ## Installation
 
-- Install `ngx-imagely` via
+From your project folder, run:
 
-`npm install @iresa/ngx-imagely --save`
+`ng add @iresa/ngx-imagely`
 
-Once installed, import `NgxImagelyModule` to the app or feature modules
+This command will import `NgxImagelyModule` into your `AppModule`:
 
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
@@ -47,7 +47,7 @@ import { NgxImagelyModule } from '@iresa/ngx-imagely';
   ],
   ...
 })
-export class YourAppModule {
+export class AppModule {
 }
 ```
 
