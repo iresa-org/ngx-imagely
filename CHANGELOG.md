@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/iresa-org/ngx-imagely/compare/v1.1.0...v2.0.0) (2020-07-11)
+
+
+### Features
+
+* 🎸 Add schematics support for ng-add ([57f69c4](https://github.com/iresa-org/ngx-imagely/commit/57f69c4712276389d4f9ce07d37a52b822566cfe))
+* 🎸 Upgrade to Angular 10 ([be7f4fe](https://github.com/iresa-org/ngx-imagely/commit/be7f4fe51eacd268ebeb43c7e08fdc00f62ac5e3))
+
 ## [1.1.0](https://github.com/iresa-org/ngx-imagely/compare/v1.0.1...v1.1.0) (2020-04-26)
 
 
