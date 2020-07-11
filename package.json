@@ -19,7 +19,7 @@
     "publish:lib": "npm publish dist/iresa/ngx-imagely",
     "copy-readme": "copyfiles README.md dist/iresa/ngx-imagely",
     "schematics:build": "tsc -p tsconfig.schematics.json && npm run schematics:copy",
-    "schematics:copy": "copyfiles schematics/collection.json dist/iresa/ngx-imagely"
+    "schematics:copy": "copyfiles schematics/collection.json dist/iresa/ngx-imagely && copyfiles schematics/ng-add/schema.json dist/iresa/ngx-imagely"
   },
   "dependencies": {
     "@angular/animations": "~10.0.3",
