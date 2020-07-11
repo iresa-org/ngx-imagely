@@ -9,13 +9,10 @@ import { DOCUMENT } from '@angular/common';
   selector: 'app-benchmark',
   templateUrl: './benchmark.component.html',
   styleUrls: ['./benchmark.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BenchmarkComponent implements OnInit {
   options = ['100', '500', '1000'];
-  keywords = IMG_KEYWORD_LIST;
-  min = 400;
-  max = 200;
 
   imageNum$ = new BehaviorSubject<number[]>([]);
   constructor(@Inject(DOCUMENT) private document: Document) {}
@@ -23,14 +20,6 @@ export class BenchmarkComponent implements OnInit {
   imageNumFormCtrl = new FormControl(this.options[0]);
 
   ngOnInit(): void {}
-
-  get randomSize() {
-    return Math.round(Math.random() * (this.max - this.min) + this.min);
-  }
-
-  get keyword() {
-    return this.keywords[Math.floor(Math.random() * this.keywords.length)];
-  }
 
   generateArray(value) {
     this.imageNum$.next(Array(value).fill(4));

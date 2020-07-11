@@ -11,14 +11,16 @@
   </div>
   <div>
     <section class="photos">
-      <img
-        imagely
-        *ngFor="let num of imageNum$ | async; let i = index"
-        width="400"
-        height="400"
-        src="https://picsum.photos/300/200?random={{ i }}"
-        alt="Benchmark pic {{ i }}"
-      />
+      <div class="title" *ngFor="let num of imageNum$ | async; let i = index">
+        <img
+          imagely
+          width="800"
+          height="800"
+          src="https://picsum.photos/1000/1000?random={{ i }}"
+          alt="Benchmark pic {{ i }}"
+        />
+        <h3>Image {{ i + 1 }}</h3>
+      </div>
     </section>
   </div>
 </div>
