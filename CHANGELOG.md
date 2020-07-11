@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/iresa-org/ngx-imagely/compare/v2.0.0...v2.0.1) (2020-07-11)
+
+
+### Bug Fixes
+
+* 🐛 Add schematics field to package.json ([d15b722](https://github.com/iresa-org/ngx-imagely/commit/d15b7227fa39f8a0f0ece9f6ff35befba98497c7))
+
 ## [2.0.0](https://github.com/iresa-org/ngx-imagely/compare/v1.1.0...v2.0.0) (2020-07-11)
 
 
