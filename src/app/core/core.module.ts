@@ -19,6 +19,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { NgxImagelyModule } from '@iresa/ngx-imagely';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, `${environment.i18nPrefix}/assets/i18n/`, '.json');
@@ -48,9 +49,12 @@ export function HttpLoaderFactory(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
+
+    // NgxImagely
+    NgxImagelyModule.forRoot(),
   ],
   declarations: [],
   exports: [
@@ -64,8 +68,11 @@ export function HttpLoaderFactory(http: HttpClient) {
 
     // 3rd party
     FontAwesomeModule,
-    TranslateModule
-  ]
+    TranslateModule,
+
+    // NgxImagely
+    NgxImagelyModule,
+  ],
 })
 export class CoreModule {
   constructor(

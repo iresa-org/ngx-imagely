@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy, Inject } from '@angular/cor
 import { FormControl } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { MatSelectChange } from '@angular/material/select';
-import { IMG_KEYWORD_LIST } from './image-keywords';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -22,7 +21,8 @@ export class BenchmarkComponent implements OnInit {
   ngOnInit(): void {}
 
   generateArray(value) {
-    this.imageNum$.next(Array(value).fill(4));
+    this.imageNum$.next([]);
+    setTimeout(() => this.imageNum$.next(Array(value).fill(4)), 1000);
   }
 
   onSelectionChange(e: MatSelectChange) {

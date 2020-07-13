@@ -1,11 +1,13 @@
-import { Directive, ElementRef, HostListener, OnInit, Renderer2, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, OnInit, Renderer2, Input, Inject } from '@angular/core';
+import { NgxImagelyConfigService } from './ngx-imagely-config.service';
+import { NgxImagelyConfig } from './ngx-imagely-config';
 
 @Directive({
-  selector: '[imagely], img'
+  selector: '[imagely], img',
 })
 export class ImagelyDirective implements OnInit {
   @Input()
-  loadingType: 'lazy' | 'eager' = 'lazy';
+  loadingType: 'lazy' | 'eager';
 
   @Input()
   default: string;
@@ -16,7 +18,11 @@ export class ImagelyDirective implements OnInit {
 
   private readonly MAX_COUNT = 3;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    @Inject(NgxImagelyConfigService) private config: NgxImagelyConfig
+  ) {
     this.nativeEl = this.el.nativeElement;
   }
 
@@ -31,7 +37,7 @@ export class ImagelyDirective implements OnInit {
       this.setImage(this.nativeEl.getAttribute('src'));
     }
     if (this.trialCount === this.MAX_COUNT) {
-      this.setImage(this.default);
+      this.setImage(this.default ?? this.config.default);
     }
   }
 
@@ -47,12 +53,13 @@ export class ImagelyDirective implements OnInit {
   }
 
   private setImage(src) {
-    if (this.default && this.default.trim() !== '') {
+    const defaultURL = this.default ?? this.config.default;
+    if (defaultURL && defaultURL.trim() !== '') {
       this.renderer.setAttribute(this.nativeEl, 'src', src);
     }
   }
 
   private setLoadingType() {
-    this.renderer.setAttribute(this.nativeEl, 'loading', this.loadingType);
+    this.renderer.setAttribute(this.nativeEl, 'loading', this.loadingType ?? this.config.loadingType);
   }
 }
