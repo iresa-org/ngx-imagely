@@ -27,9 +27,7 @@ An image rendering directive for Angular 2+ app. Demo: https://iresa-org.github.
 
 ## Installation
 
-From your project folder, run:
-
-`ng add @iresa/ngx-imagely`
+From your project folder, run `ng add @iresa/ngx-imagely`
 
 This command will import `NgxImagelyModule.forRoot()` into your `AppModule`:
 
@@ -47,10 +45,10 @@ import { NgxImagelyModule } from '@iresa/ngx-imagely';
   ],
   ...
 })
-export class AppModule {
-}
+export class AppModule {}
 ```
-Register `NgxImagelyModule` to a feature module with following code:
+
+Or register `NgxImagelyModule` to a feature module with following code:
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
  
@@ -65,8 +63,7 @@ import { NgxImagelyModule } from '@iresa/ngx-imagely';
   ],
   ...
 })
-export class FeatureModule {
-}
+export class FeatureModule {}
 ```
 
 ## Usage
@@ -83,6 +80,7 @@ export class FeatureModule {
 />
 ```
 ### Fallback image
+
 ```html
 <img
   src="https://noimage.com" 
@@ -92,6 +90,29 @@ export class FeatureModule {
   default="https://www.amulyamica.com/files/noimage.jpg"
 />
 ```
+
+You can also provide these configurations above at root level
+
+```ts
+import { NgxImagelyModule } from '@iresa/ngx-imagely';
+ 
+@NgModule({
+  ...
+  imports: [
+    ...
+    
+    // NgxImagelyModule
+    NgxImagelyModule.forRoot({
+      default: 'https://www.amulyamica.com/files/noimage.jpg',
+      loadingType: 'eager'
+    }), 
+    ...
+  ],
+  ...
+})
+export class AppModule {}
+```
+
 
 ## Properties
 
