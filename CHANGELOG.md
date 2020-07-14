@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/iresa-org/ngx-imagely/compare/v2.0.2...v2.1.0) (2020-07-14)
+
+
+### Features
+
+* 🎸 Allow configurations at module level (forRoot) ([ce1e448](https://github.com/iresa-org/ngx-imagely/commit/ce1e4481af8be2dd75c4d3e469bb5c9e88b6e35d))
+* 🎸 Update schematics to support forRoot() ([4db6b2b](https://github.com/iresa-org/ngx-imagely/commit/4db6b2bb71bb948fa2c1d07f7a7d84ab83b52ba1))
+
 ### [2.0.2](https://github.com/iresa-org/ngx-imagely/compare/v2.0.1...v2.0.2) (2020-07-11)
 
 
