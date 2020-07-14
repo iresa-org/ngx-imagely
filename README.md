@@ -69,15 +69,25 @@ export class FeatureModule {}
 
 ## Usage
 
-### Loading Type (`Lazy` or `Eager`)
+### Loading Type
 
 ```html
+<!-- Lazy Loading -->
 <img
   src="https://material.angular.io/assets/img/examples/shiba2.jpg"
   alt="Photo of a Shiba Inu"
   height="280"
   width="350"
-  loadingType="eager"     //loadingType="lazy"
+  loadingType="lazy"
+/>
+
+<!-- Eager Loading -->
+<img
+  src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+  alt="Photo of a Shiba Inu"
+  height="280"
+  width="350"
+  loadingType="eager"
 />
 ```
 
