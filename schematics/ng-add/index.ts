@@ -18,7 +18,7 @@ import {
 } from '../utils';
 
 const libName = '@iresa/ngx-imagely';
-const libVersion = '2.0.2';
+const libVersion = '2.1.0';
 const moduleName = 'NgxImagelyModule';
 const modulePath = libName;
 
@@ -45,7 +45,7 @@ function addModuleToImports(projectName: string | undefined): Rule {
     const workspace = getWorkspace(host);
     const project = getProjectFromWorkspace(workspace, projectName);
 
-    addModuleImportToRootModule(host, moduleName, modulePath, project);
+    addModuleImportToRootModule(host, `${moduleName}.forRoot()`, modulePath, project);
 
     return host;
   };
