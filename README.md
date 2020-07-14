@@ -31,8 +31,26 @@ From your project folder, run:
 
 `ng add @iresa/ngx-imagely`
 
-This command will import `NgxImagelyModule` into your `AppModule`:
+This command will import `NgxImagelyModule.forRoot()` into your `AppModule`:
 
+```ts
+import { NgxImagelyModule } from '@iresa/ngx-imagely';
+ 
+@NgModule({
+  ...
+  imports: [
+    ...
+    
+    // NgxImagelyModule
+    NgxImagelyModule.forRoot(), 
+    ...
+  ],
+  ...
+})
+export class AppModule {
+}
+```
+Register `NgxImagelyModule` to a feature module with following code:
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
  
@@ -47,11 +65,13 @@ import { NgxImagelyModule } from '@iresa/ngx-imagely';
   ],
   ...
 })
-export class AppModule {
+export class FeatureModule {
 }
 ```
 
 ## Usage
+
+### Loading Type (`Lazy` or `Eager`)
 
 ```html
 <img
@@ -59,7 +79,17 @@ export class AppModule {
   alt="Photo of a Shiba Inu"
   height="280"
   width="350"
-  loadingType="eager"
+  loadingType="eager"     //loadingType="lazy"
+/>
+```
+### Fallback image
+```html
+<img
+  src="https://noimage.com" 
+  alt="Url not found. Use default" 
+  height="350" 
+  width="350"
+  default="https://www.amulyamica.com/files/noimage.jpg"
 />
 ```
 
