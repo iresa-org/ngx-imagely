@@ -49,6 +49,7 @@ export class AppModule {}
 ```
 
 Or register `NgxImagelyModule` to a feature module with following code:
+
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
  
@@ -79,6 +80,7 @@ export class FeatureModule {}
   loadingType="eager"     //loadingType="lazy"
 />
 ```
+
 ### Fallback image
 
 ```html
@@ -91,7 +93,7 @@ export class FeatureModule {}
 />
 ```
 
-You can also provide these configurations above at root level
+You can also provide these configurations at root level
 
 ```ts
 import { NgxImagelyModule } from '@iresa/ngx-imagely';
