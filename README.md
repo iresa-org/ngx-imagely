@@ -91,7 +91,7 @@ export class FeatureModule {}
 />
 ```
 
-### Fallback image
+### Retries and Fallback image
 
 ```html
 <img
@@ -100,6 +100,7 @@ export class FeatureModule {}
   height="350" 
   width="350"
   default="https://www.amulyamica.com/files/noimage.jpg"
+  retryCount="3"
 />
 ```
 
@@ -132,6 +133,7 @@ Property     | Type   | Descriptions
 ------------ | -------| -------------
 default      | Input  | URL of a fallback image when failure occurs
 loadingType  | Input  | Loading type for target images. Values: 'lazy' \| 'eager'. Default value: 'lazy'
+retryCount   | Input  | Count of how many times a failed image should get retried. Default value: 0
 
 ## Contributors ✨
 
