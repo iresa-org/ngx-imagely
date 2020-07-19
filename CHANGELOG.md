@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/iresa-org/ngx-imagely/compare/v2.1.0...v2.2.0) (2020-07-19)
+
+
+### Features
+
+* 🎸 Add config for retryCount ([0ff8e87](https://github.com/iresa-org/ngx-imagely/commit/0ff8e873388dcb0372723e077ef23e02d032c378))
+
 ## [2.1.0](https://github.com/iresa-org/ngx-imagely/compare/v2.0.2...v2.1.0) (2020-07-14)
 
 
