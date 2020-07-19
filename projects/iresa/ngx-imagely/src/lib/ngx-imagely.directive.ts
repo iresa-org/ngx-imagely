@@ -7,16 +7,41 @@ import { NgxImagelyConfig } from './ngx-imagely-config';
 })
 export class ImagelyDirective implements OnInit {
   @Input()
-  loadingType: 'lazy' | 'eager';
+  set loadingType(value) {
+    this._loadingType = value ?? this.config.loadingType;
+  }
+
+  get loadingType() {
+    return this._loadingType;
+  }
 
   @Input()
-  default: string;
+  set default(value) {
+    this._default = value ?? this.config.default;
+  }
+
+  get default() {
+    return this._default;
+  }
+
+  @Input()
+  set retryCount(value) {
+    this._retryCount = +value ?? this.config.retryCount;
+  }
+
+  get retryCount() {
+    return this._retryCount;
+  }
 
   private readonly nativeEl: HTMLImageElement;
 
   private trialCount = 0;
 
-  private readonly MAX_COUNT = 3;
+  private _loadingType = this.config.loadingType;
+
+  private _default = this.config.default;
+
+  private _retryCount = this.config.retryCount;
 
   constructor(
     private el: ElementRef,
@@ -32,12 +57,16 @@ export class ImagelyDirective implements OnInit {
   }
 
   @HostListener('error') onError() {
-    if (this.trialCount < this.MAX_COUNT) {
-      this.trialCount++;
-      this.setImage(this.nativeEl.getAttribute('src'));
-    }
-    if (this.trialCount === this.MAX_COUNT) {
-      this.setImage(this.default ?? this.config.default);
+    if (this.retryCount === 0) {
+      this.setImage(this.default);
+    } else if (this.retryCount > 0) {
+      if (this.trialCount < this.retryCount) {
+        this.trialCount++;
+        this.setImage(this.nativeEl.getAttribute('src'));
+      }
+      if (this.trialCount === this.retryCount) {
+        this.setImage(this.default);
+      }
     }
   }
 
@@ -53,13 +82,12 @@ export class ImagelyDirective implements OnInit {
   }
 
   private setImage(src) {
-    const defaultURL = this.default ?? this.config.default;
-    if (defaultURL && defaultURL.trim() !== '') {
+    if (this.default && this.default.trim() !== '') {
       this.renderer.setAttribute(this.nativeEl, 'src', src);
     }
   }
 
   private setLoadingType() {
-    this.renderer.setAttribute(this.nativeEl, 'loading', this.loadingType ?? this.config.loadingType);
+    this.renderer.setAttribute(this.nativeEl, 'loading', this.loadingType);
   }
 }
