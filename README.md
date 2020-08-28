@@ -78,7 +78,6 @@ export class FeatureModule {}
   alt="Photo of a Shiba Inu"
   height="280"
   width="350"
-  loadingType="lazy"
 />
 
 <!-- Eager Loading -->
@@ -129,11 +128,11 @@ export class AppModule {}
 
 ## Properties
 
-Property     | Type   | Descriptions
------------- | -------| -------------
-default      | Input  | URL of a fallback image when failure occurs
-loadingType  | Input  | Loading type for target images. Values: 'lazy' \| 'eager'. Default value: 'lazy'
-retryCount   | Input  | Count of how many times a failed image should get retried. Default value: 0
+Property     | Type   | Descriptions                                              | Default
+------------ | -------| ----------------------------------------------------------|---------
+default      | Input  | URL of a fallback image when failure occurs               |
+loadingType  | Input  | Loading type for target images. Values: 'lazy' \| 'eager'.| 'lazy'
+retryCount   | Input  | Count of how many times a failed image should get retried.| 0
 
 ## Contributors ✨
 
