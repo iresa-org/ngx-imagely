@@ -88,6 +88,9 @@ export class ImagelyDirective implements OnInit {
   }
 
   private setLoadingType() {
-    this.renderer.setAttribute(this.nativeEl, 'loading', this.loadingType);
+    const supports = 'loading' in HTMLImageElement.prototype;
+    if (supports) {
+      this.renderer.setAttribute(this.nativeEl, 'loading', this.loadingType);
+    }
   }
 }
