@@ -5,20 +5,20 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'docs',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'docs',
-    loadChildren: () => import('./features/docs/docs.module').then(m => m.DocsModule)
+    loadChildren: () => import('./features/docs/docs.module').then((m) => m.DocsModule),
   },
   {
     path: 'benchmark',
-    loadChildren: () => import('./features/benchmark/benchmark.module').then(m => m.BenchmarkModule)
+    loadChildren: () => import('./features/benchmark/benchmark.module').then((m) => m.BenchmarkModule),
   },
   {
     path: '**',
-    redirectTo: 'docs'
-  }
+    redirectTo: 'docs',
+  },
 ];
 
 @NgModule({
@@ -26,9 +26,10 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       useHash: true,
       scrollPositionRestoration: 'enabled',
-      preloadingStrategy: PreloadAllModules
-    })
+      preloadingStrategy: PreloadAllModules,
+      relativeLinkResolution: 'legacy',
+    }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

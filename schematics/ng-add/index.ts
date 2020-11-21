@@ -18,7 +18,7 @@ import {
 } from '../utils';
 
 const libName = '@iresa/ngx-imagely';
-const libVersion = '2.1.0';
+const libVersion = '3.0.0';
 const moduleName = 'NgxImagelyModule';
 const modulePath = libName;
 

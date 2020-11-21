@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FallbackImageComponent } from './fallback-image.component';
 
@@ -6,7 +6,7 @@ describe('FallbackImageComponent', () => {
   let component: FallbackImageComponent;
   let fixture: ComponentFixture<FallbackImageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [FallbackImageComponent]
     }).compileComponents();
