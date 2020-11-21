@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/iresa-org/ngx-imagely/compare/v2.2.0...v3.0.0) (2020-11-21)
+
+
+### Features
+
+* 🎸 Angular 11 Support ([ae20452](https://github.com/iresa-org/ngx-imagely/commit/ae20452318f1ba4e8ecd9382617e48f6ac6480c5))
+* 🎸 Only add loading attr for supported browsers ([16c95d6](https://github.com/iresa-org/ngx-imagely/commit/16c95d68db01b3b0ffc5e87cbcadedccca36a848))
+
 ## [2.2.0](https://github.com/iresa-org/ngx-imagely/compare/v2.1.0...v2.2.0) (2020-07-19)
 
 
